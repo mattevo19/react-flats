@@ -1,5 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/sort-comp */
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
@@ -16,15 +14,15 @@ class App extends Component {
     };
   }
 
+  selectFlat = (index) => {
+    this.setState({ selectedFlat: flats[index] });
+  }
+
   center() {
     return {
       lat: this.state.selectedFlat.lat,
       lng: this.state.selectedFlat.lng
     };
-  }
-
-  selectFlat = (index) => {
-    this.setState({ selectedFlat: flats[index] });
   }
 
   render() {
